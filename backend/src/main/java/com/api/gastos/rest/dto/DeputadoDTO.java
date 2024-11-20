@@ -1,5 +1,7 @@
 package com.api.gastos.rest.dto;
 
+import java.io.Serializable;
+
 import org.modelmapper.ModelMapper;
 
 import com.api.gastos.model.Deputado;
@@ -12,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DeputadoDTO {
+public class DeputadoDTO implements Serializable{
     @Schema(description = "Identificador do deputado", example = "1")
     private Long id;
 

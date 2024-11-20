@@ -1,5 +1,6 @@
 package com.api.gastos.rest.dto;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 import org.modelmapper.ModelMapper;
@@ -14,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DespesaDTO {
+public class DespesaDTO implements Serializable {
     @Schema(description = "Identificador da despesa", example = "1")
     private Long id;
 
