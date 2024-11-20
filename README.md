@@ -1,8 +1,8 @@
 # Gastos Parlamentares
 
-![Java](https://img.shields.io/badge/Java-17-orange) ![TypeScript](https://img.shields.io/badge/TypeScript--blue) ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3-green) ![NextJs](https://img.shields.io/badge/Next.js-15-black) ![Tailwind](https://img.shields.io/badge/Tailwind-CSS-blue) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue) ![Docker](https://img.shields.io/badge/Docker--blue) [![LinkedIn](https://img.shields.io/badge/Contato-LinkedIn-blue)](https://www.linkedin.com/in/gabrieudev) ![GPL Licença](https://img.shields.io/badge/Licença-GPL-blue)
+![Java](https://img.shields.io/badge/Java-17-orange) ![TypeScript](https://img.shields.io/badge/TypeScript--blue) ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3-green) ![Redis](https://img.shields.io/badge/Redis--red) ![NextJs](https://img.shields.io/badge/Next.js-15-black) ![Tailwind](https://img.shields.io/badge/Tailwind-CSS-blue) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue) ![Docker](https://img.shields.io/badge/Docker--blue) [![LinkedIn](https://img.shields.io/badge/Contato-LinkedIn-blue)](https://www.linkedin.com/in/gabrieudev) ![GPL Licença](https://img.shields.io/badge/Licença-GPL-blue)
 
-Seja bem-vindo(a) ao meu projeto de dashboard para consulta de **Gastos Parlamentares**.
+Seja bem-vindo(a) ao meu projeto de dashboard para análise de **Gastos Parlamentares**.
 
 ## Tabela de Conteúdos
 
@@ -15,13 +15,13 @@ Seja bem-vindo(a) ao meu projeto de dashboard para consulta de **Gastos Parlamen
 
 ## Introdução
 
-O projeto é baseado em um [desafio](https://github.com/agendaedu/desafio-backend?tab=readme-ov-file) back-end, no qual propõe a construção de uma API, utilizando o framework Rails, que realize o processamento e armazenamento das informações contidas em um arquivo CSV, que pode ser obtido no [Portal da Câmara dos Deputados](https://dadosabertos.camara.leg.br/swagger/api.html?tab=staticfile#staticfile), e disponibilize algumas rotas para visualização de informações. Sendo assim, este projeto é uma adaptação que utiliza os frameworks Spring Boot e Next.js para a construção do backend e da interface com dashboard.
+O projeto é baseado em um [desafio](https://github.com/agendaedu/desafio-backend?tab=readme-ov-file), no qual propõe a construção de uma API, utilizando o framework Rails, que realize o processamento e armazenamento das informações contidas em um arquivo CSV, que pode ser obtido no [Portal da Câmara dos Deputados](https://dadosabertos.camara.leg.br/swagger/api.html?tab=staticfile#staticfile), e disponibilize algumas rotas para visualização de informações. Sendo assim, este projeto é uma adaptação que utiliza os frameworks Spring Boot e Next.js para a construção do backend e da interface com dashboard.
 
 ## Funcionalidades
 
 - **Upload de arquivo CSV**
 
-- **Filtragem de informações por estado**
+- **Filtragem das informações por estado**
 
   - ![Página inicial](./docs/images/upload.png)
 
@@ -43,7 +43,7 @@ O projeto é baseado em um [desafio](https://github.com/agendaedu/desafio-backen
 
   - ![Gráfico](./docs/images/grafico.png)
 
-- **Integração com o banco de dados PostgreSQL**
+- **Integração com PostgreSQL e Redis para o armazenamento e cache dos dados**
 
 - **Documentação completa e detalhada da API utilizando Swagger**
 
@@ -51,10 +51,11 @@ O projeto é baseado em um [desafio](https://github.com/agendaedu/desafio-backen
 
 ## Tecnologias
 
-- ![Java](https://img.shields.io/badge/Java-17-orange): Linguagem de programação utilizada para o backend.
+- ![Java](https://img.shields.io/badge/Java-17-orange): Linguagem de programação utilizada no backend.
 - ![TypeScript](https://img.shields.io/badge/TypeScript--blue): Superconjunto sintático estrito de JavaScript e adiciona tipagem estática opcional à linguagem.
-- ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3-green): Framework usado na construção de APIs REST.
-- ![NextJs](https://img.shields.io/badge/Next.js-15-black): Framework utilizado para a construção do frontend.
+- ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3-green): Framework utilizado na construção da API.
+- ![Redis](https://img.shields.io/badge/Redis--red): Banco de dados em memória utilizado para cache.
+- ![NextJs](https://img.shields.io/badge/Next.js-15-black): Framework utilizado na construção do frontend.
 - ![Tailwind](https://img.shields.io/badge/Tailwind-CSS-blue): Framework que entrega classes CSS utilitárias, facilitando a estilização do projeto.
 - ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue): Banco de dados relacional.
 - ![Docker](https://img.shields.io/badge/Docker--blue): Tecnologia de conteinerização open-source.
