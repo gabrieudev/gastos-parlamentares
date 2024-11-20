@@ -1,5 +1,6 @@
 package com.api.gastos.service;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -19,12 +20,13 @@ public class DeputadoService {
         this.deputadoRepository = deputadoRepository;
     }
 
+    @Cacheable(value = "DeputadosCache", key = "#id")
     @Transactional(readOnly = true)
     public DeputadoDTO obterPorId(Long id) {
         return deputadoRepository.findById(id)
             .map(Deputado::toDto)
             .orElseThrow(() -> new EntityNotFoundException("Deputado não encontrado"));
-    } 
+    }
 
     @Transactional(readOnly = true)
     public Page<DeputadoDTO> pesquisar(String nome, String uf, String partido, Pageable pageable) {

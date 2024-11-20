@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.LocalDateTime;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -29,6 +30,7 @@ public class DespesaService {
         this.deputadoRepository = deputadoRepository;
     }
 
+    @Cacheable(value = "DespesasCache", key = "#id")
     @Transactional(readOnly = true)
     public DespesaDTO obterPorId(Long id) {
         return despesaRepository.findById(id)
@@ -36,6 +38,7 @@ public class DespesaService {
             .orElseThrow(() -> new EntityNotFoundException("Despesa não encontrada"));
     }
 
+    @Cacheable(value = "SomaDespesasCache", key = "#idDeputado")
     @Transactional(readOnly = true)
     public SomaDespesasDTO somaValorLiquidoPorDeputado(Long idDeputado) {
         Deputado deputado = deputadoRepository.findById(idDeputado)
@@ -44,6 +47,7 @@ public class DespesaService {
         return new SomaDespesasDTO(valor.setScale(2, RoundingMode.HALF_UP));
     }
 
+    @Cacheable(value = "MediaDespesasCache", key = "#idDeputado")
     @Transactional(readOnly = true)
     public MediaDespesasDTO mediaValorLiquidoPorDeputado(Long idDeputado) {
         Deputado deputado = deputadoRepository.findById(idDeputado)
@@ -52,6 +56,7 @@ public class DespesaService {
         return new MediaDespesasDTO(valor.setScale(2, RoundingMode.HALF_UP));
     }
 
+    @Cacheable(value = "MaximaDespesaCache", key = "#idDeputado")
     @Transactional(readOnly = true)
     public DespesaDTO maximaDespesaPorDeputado(Long idDeputado) {
         Deputado deputado = deputadoRepository.findById(idDeputado)

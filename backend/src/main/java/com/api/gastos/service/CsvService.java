@@ -28,10 +28,12 @@ public class CsvService {
 
     private final DeputadoRepository deputadoRepository;
     private final DespesaRepository despesaRepository;
+    private final RedisService redisService;
 
-    public CsvService(DeputadoRepository deputadoRepository, DespesaRepository despesaRepository) {
+    public CsvService(DeputadoRepository deputadoRepository, DespesaRepository despesaRepository, RedisService redisService) {
         this.deputadoRepository = deputadoRepository;
         this.despesaRepository = despesaRepository;
+        this.redisService = redisService;
     }
 
     @Transactional
@@ -91,5 +93,6 @@ public class CsvService {
     public void limpar() {
         deputadoRepository.resetarTabela();
         despesaRepository.resetarTabela();
+        redisService.limparCache();
     }
 }
