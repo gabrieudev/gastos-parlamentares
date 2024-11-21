@@ -15,7 +15,7 @@ Seja bem-vindo(a) ao meu projeto de dashboard para análise de **Gastos Parlamen
 
 ## Introdução
 
-O projeto é baseado em um [desafio](https://github.com/agendaedu/desafio-backend?tab=readme-ov-file), no qual propõe a construção de uma API, utilizando o framework Rails, que realize o processamento e armazenamento das informações contidas em um arquivo CSV, que pode ser obtido no [Portal da Câmara dos Deputados](https://dadosabertos.camara.leg.br/swagger/api.html?tab=staticfile#staticfile), e disponibilize algumas rotas para visualização de informações. Sendo assim, este projeto é uma adaptação que utiliza os frameworks Spring Boot e Next.js para a construção do backend e da interface com dashboard.
+O projeto é baseado em um [desafio](https://github.com/agendaedu/desafio-backend?tab=readme-ov-file), no qual propõe a construção de uma API, utilizando o framework Ruby on Rails, que realize o processamento e armazenamento das informações contidas em um arquivo CSV, que pode ser obtido no [Portal da Câmara dos Deputados](https://dadosabertos.camara.leg.br/swagger/api.html?tab=staticfile#staticfile), e disponibilize algumas rotas para visualização de informações. Sendo assim, este projeto é uma adaptação que utiliza os frameworks Spring Boot e Next.js para a construção do backend e da interface com dashboard.
 
 ## Funcionalidades
 
