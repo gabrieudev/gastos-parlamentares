@@ -1,91 +1,82 @@
-# Gastos Parlamentares
+[JAVASCRIPT__BADGE]: https://img.shields.io/badge/Javascript-000?style=for-the-badge&logo=javascript
+[TYPESCRIPT__BADGE]: https://img.shields.io/badge/typescript-D4FAFF?style=for-the-badge&logo=typescript
+[REACT__BADGE]: https://img.shields.io/badge/React-005CFE?style=for-the-badge&logo=react
+[JAVA_BADGE]: https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white
+[SPRING_BADGE]: https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white
+[REDIS_BADGE]: https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white
+[NEXT_BADGE]: https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white
+[TAILWIND_BADGE]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
+[POSTGRES_BADGE]: https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white
+[DOCKER_BADGE]: https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white
+[SWAGGER_BADGE]: https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white
 
-![Java](https://img.shields.io/badge/Java-17-orange) ![TypeScript](https://img.shields.io/badge/TypeScript--blue) ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3-green) ![Redis](https://img.shields.io/badge/Redis--red) ![NextJs](https://img.shields.io/badge/Next.js-15-black) ![Tailwind](https://img.shields.io/badge/Tailwind-CSS-blue) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue) ![Docker](https://img.shields.io/badge/Docker--blue) [![LinkedIn](https://img.shields.io/badge/Contato-LinkedIn-blue)](https://www.linkedin.com/in/gabrieudev) ![GPL Licença](https://img.shields.io/badge/Licença-GPL-blue)
+<h1 align="center" style="font-weight: bold;">Gastos parlamentares 🏛️</h1>
 
-Seja bem-vindo(a) ao meu projeto de dashboard para análise de **Gastos Parlamentares**.
+![java][JAVA_BADGE]
+![javascript][JAVASCRIPT__BADGE]
+![typescript][TYPESCRIPT__BADGE]
+![spring][SPRING_BADGE]
+![react][REACT__BADGE]
+![next][NEXT_BADGE]
+![tailwind][TAILWIND_BADGE]
+![postgres][POSTGRES_BADGE]
+![redis][REDIS_BADGE]
+![docker][DOCKER_BADGE]
+![swagger][SWAGGER_BADGE]
 
-## Tabela de Conteúdos
+<p align="center">
+ <a href="#sobre">Sobre</a> • 
+ <a href="#inicio">Início</a> • 
+  <a href="#rotas">Rotas da aplicação</a> • 
+ <a href="#contribuir">Contribuir</a>
+</p>
 
-- [Introdução](#introdução)
-- [Funcionalidades](#funcionalidades)
-- [Tecnologias](#tecnologias)
-- [Iniciando](#iniciando)
-- [Contribuições](#contribuições)
-- [Contato](#contato)
+<p align="center">
+    <img src="./docs/images/grafico.png" alt="Imagem Exemplo" width="400px">
+</p>
 
-## Introdução
+<h2 id="sobre">📌 Sobre</h2>
 
-O projeto é baseado em um [desafio](https://github.com/agendaedu/desafio-backend?tab=readme-ov-file), no qual propõe a construção de uma API, utilizando o framework Ruby on Rails, que realize o processamento e armazenamento das informações contidas em um arquivo CSV, que pode ser obtido no [Portal da Câmara dos Deputados](https://dadosabertos.camara.leg.br/swagger/api.html?tab=staticfile#staticfile), e disponibilize algumas rotas para visualização de informações. Sendo assim, este projeto é uma adaptação que utiliza os frameworks Spring Boot e Next.js para a construção do backend e da interface com dashboard.
+O projeto é baseado em um [desafio](https://github.com/agendaedu/desafio-backend?tab=readme-ov-file), que propõe a construção de uma API utilizando o framework Ruby on Rails, capaz de processar e armazenar informações contidas em um arquivo CSV. Este arquivo pode ser obtido no [Portal da Câmara dos Deputados](https://dadosabertos.camara.leg.br/swagger/api.html?tab=staticfile#staticfile). A API deve também disponibilizar algumas rotas para a visualização das informações. Este projeto é uma adaptação que utiliza os frameworks Spring Boot e Next.js para construir o backend e a interface com dashboard.
 
-## Funcionalidades
+<h2 id="inicio">🚀 Início</h2>
 
-- **Upload de arquivo CSV**
+<h3>Pré-requisitos</h3>
 
-- **Filtragem das informações por estado**
+- [Docker](https://www.docker.com/get-started/)
+- [Git](https://git-scm.com/downloads)
 
-  - ![Página inicial](./docs/images/upload.png)
+<h3>Clonando o projeto</h3>
 
-- **Visualização de deputados com paginação**
+```bash
+git clone https://github.com/gabrieudev/gastos-parlamentares.git
+```
 
-- **Pesquisa de deputado por nome**
+<h3>Iniciando</h3>
 
-- **Seleção de deputados**
+```bash
+cd gastos
+docker compose up -d
+```
 
-  - ![Deputados](./docs/images/deputados.png)
+<h2 id="rotas">📍 Rotas da aplicação</h2>
 
-- **Obtenção da maior despesa do deputado junto ao comprovante**
+| Rota                  | Descrição                                                                                                                                                                  |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <kbd>/</kbd>          | Página inicial que contém o formulário para upload do arquivo CSV                                                                                                          |
+| <kbd>/dashboard</kbd> | Página principal da aplicação. Contém funcionalidades como listagem paginada dos deputados, seleção de deputado e exibição de informações através de um gráfico interativo |
 
-- **Deleção dos dados para renovação das informações**
-
-  - ![Dashboard](./docs/images/dashboard.png)
-
-- **Gráfico interativo com as despesas mensais do deputado selecionado**
-
-  - ![Gráfico](./docs/images/grafico.png)
-
-- **Integração com PostgreSQL e Redis para o armazenamento e cache dos dados**
-
-- **Documentação completa e detalhada da API utilizando Swagger**
-
-- **Conteinerização do projeto utilizando Docker**
-
-## Tecnologias
-
-- ![Java](https://img.shields.io/badge/Java-17-orange): Linguagem de programação utilizada no backend.
-- ![TypeScript](https://img.shields.io/badge/TypeScript--blue): Superconjunto sintático estrito de JavaScript e adiciona tipagem estática opcional à linguagem.
-- ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3-green): Framework utilizado na construção da API.
-- ![Redis](https://img.shields.io/badge/Redis--red): Banco de dados em memória utilizado para cache.
-- ![NextJs](https://img.shields.io/badge/Next.js-15-black): Framework utilizado na construção do frontend.
-- ![Tailwind](https://img.shields.io/badge/Tailwind-CSS-blue): Framework que entrega classes CSS utilitárias, facilitando a estilização do projeto.
-- ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue): Banco de dados relacional.
-- ![Docker](https://img.shields.io/badge/Docker--blue): Tecnologia de conteinerização open-source.
-
-## Iniciando
-
-Siga os seguintes passos para executar o projeto na sua máquina (necessário ter o Docker instalado).
-
-1. Clone o repositório:
-
-   ```bash
-   git clone https://github.com/gabrieudev/gastos-parlamentares.git
-   ```
-
-2. Vá para a pasta raiz do projeto e execute o comando:
-
-   ```bash
-   docker-compose up --build
-   ```
-
-3. Acesse a [página principal](http://localhost:3000) do projeto ou a [documentação completa](http://localhost:8080/swagger-ui/index.html) para obter mais informações sobre o backend.
-
-## Contribuições
+<h2 id="contribuir">📫 Contribuir</h2>
 
 Contribuições são muito bem-vindas! Caso queira contribuir, faça um fork do repositório e crie um pull request.
 
-## Contato
+1. `git clone https://github.com/gabrieudev/gastos-parlamentares.git`
+2. `git checkout -b feature/NOME`
+3. Siga os padrões de commit
+4. Abra um Pull Request explicando o problema resolvido ou funcionalidade criada. Se possível, adicione screenshots de modificações visuais e aguarde a revisão!
 
-Caso tenha alguma sugestão ou dúvida, entre em contato comigo no [LinkedIn](https://www.linkedin.com/in/gabrieudev).
+<h3>Documentações que podem ajudar</h3>
 
----
+[📝 Como criar um Pull Request](https://www.atlassian.com/br/git/tutorials/making-a-pull-request)
 
-**Licença:** Esse projeto é licenciado sob os termos da [GNU General Public License (GPL)](LICENSE).
+[💾 Padrão de commits](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
